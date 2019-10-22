@@ -11,6 +11,7 @@ function loadInitialEvents()
     document.querySelector("#cameraOn").addEventListener("click", cameraOn);
     document.querySelector("#cameraOff").addEventListener("click", cameraOff);
     document.querySelector("#webCamPause").addEventListener("click", pauseStream);
+    document.querySelector("#indocentButton").addEventListener("click", indocentsFilter);
     document.querySelector("#webCamPlay").addEventListener("click", playStream);
     document.querySelector("#filterButton").addEventListener("click", filter);
     // Lligar elements <--> events amb funcions amb nom (amb paràmetres) - passades com a paràmetre (callback/retrocrida/retrollamada, 

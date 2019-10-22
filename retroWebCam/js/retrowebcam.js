@@ -177,9 +177,32 @@ function pauseStream(e){
     webCamState = webCamStates.canvas;  
 }
 
-// ENTRADA: Imatge estàtica activa i visible 
-// FUNCIÓ:  Simular el botó still dels reproductors multimèdia
-// SORTIDA: WebCam activa i visible, Imatge estàtica no visible
+function indocentsFilter(e){
+
+    var imgHat = new Image(100, 100);
+    imgHat.src ="./media/webApp/hat.svg";
+    
+    var imgGlasses = new Image(100, 100);
+    imgGlasses.src="./media/webApp/sunglasses.svg";
+
+
+    canvas =  document.querySelector("#canvas");
+
+    canvas.style.display="inline-block";
+    document.querySelector("#videoElement").style.display="inline-block"; 
+
+    var ctx = canvas.getContext("2d");
+
+    ctx.drawImage(imgHat, 200, 0, 290, 290);   
+    ctx.drawImage(imgGlasses, 250, 180, 190, 190);
+ 
+    //snapshotToCanvas(true); 
+
+      webCamState = webCamStates.canvas;  
+   
+}
+
+
 function playStream(e){
     // Alternar visibilitat dels botons play/pause
     document.querySelector("#webCamPause").style.display="inline-block"; // Hide element
